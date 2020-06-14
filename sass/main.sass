@@ -264,9 +264,12 @@ body
                  
            
            
+    .navbar
+        display: flex
+        background-color: #ffffff!important
 
     
-    .navbar
+    .nav-wrap
         display: flex!important
         height: $navbar_size_h
         font-family: 'Gotham'
@@ -275,16 +278,18 @@ body
         background-color: #ffffff!important
         padding-left: 60px
         padding-right: 60px
+        max-width: 1400px
+        margin: 0 auto        
         li.menu-item:first-child
             a
                 color: $header_nav_item_color
                 font-weight: 600
-                font-size: 17px
+                font-size: 16px
         li.menu-item:not(:first-child)
             padding-left: $nav_item_padding
             a
               color: $header_nav_item_color
-              font-size: 17px
+              font-size: 16px
               padding-bottom: 0
               font-weight: 600
                 
@@ -310,6 +315,9 @@ body
                  
     .navbar-dark
         background-color: #2e2e2e!important
+        .nav-wrap
+            background-color: #2e2e2e!important
+
         li.menu-item:first-child
             a
                 color: #ffffff                    
@@ -325,12 +333,12 @@ body
         width: $logo_size_w
         height: $logo_size_h
     #home-slider-section
-        height: calc(100vh - 150px)
+        height: calc(100vh - 170px)
         display: flex
         .container-fluid
             padding: 0  
         .slider-row
-            height: calc(100vh - 150px)
+            height: calc(100vh - 170px)
             display: flex
             width: 100%
             padding: 0
@@ -451,6 +459,10 @@ body
                 padding-left: 25px
                 padding-right: 25px
                 position: relative
+                display: flex
+                flex-flow: column nowrap
+                justify-content: center
+                height: 55px
                 &::after
                     content: ""
                     height: 5px
@@ -458,7 +470,7 @@ body
                     background-color: red
                     display: 
                     position: absolute
-                    bottom: -17px
+                    bottom: -3px
                     left: 0 
                 a
                     color: #ffffff
